@@ -1,0 +1,35 @@
+body {
+          padding: 0px;
+          margin: 0px;
+          background: #000;
+
+}
+
+header {
+          margin: 0px;
+          padding: 0px;
+          height: 7vh;
+          background-color: blue;
+          overflow: hidden;
+          width: 100vw;
+          align-items: center;
+}
+
+nav {
+          margin: 10px;
+          background:green;
+          display: flex;
+          justify-content: space-between;
+          align-content: center;
+
+
+}
+
+#logo_container {
+          align-items: end;
+          overflow: hidden;
+          width: 10%;
+          height: 10%;
+}
+
+#logo {}
