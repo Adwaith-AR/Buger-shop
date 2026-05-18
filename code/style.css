@@ -125,6 +125,25 @@ button {
           color: white;
           font-size: 20px;
           text-transform: uppercase;
-          font-family:"Rubik Bubbles" ;
+          font-family: "Rubik Bubbles";
 
+}
+
+#ordermenu_container {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          width: 40vw;
+          overflow: hidden;
+          position: absolute;
+          top: 67%;
+          left:7%;
+          
+}
+.ordermenu_child{
+          border: solid #848484 2px;
+          border-radius: 20px;
+}
+.ordermenu_img{
+          width: 150px;
 }
