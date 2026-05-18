@@ -8,28 +8,61 @@ body {
 header {
           margin: 0px;
           padding: 0px;
-          height: 7vh;
-          background-color: blue;
-          overflow: hidden;
-          width: 100vw;
+         
+          display: flex;
           align-items: center;
+          justify-content: center;
+          align-items: center;
+          border-color: white;
+          border-bottom-style:solid;
+          border-radius: 20px;
 }
 
 nav {
+          height: 7vh;
+          width: 100vw;
           margin: 10px;
-          background:green;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          
+
+
+}
+
+#logo {
+          width:7vw;
+          height: 4.5vh;
+}
+
+
+#navigation_container{
+          width: 45vw;
+          background: #000;
+          height: 7vh;
+          align-items: center;
           display: flex;
           justify-content: space-between;
-          align-content: center;
-
-
 }
-
-#logo_container {
-          align-items: end;
+#navigation_container a{
+          color: white;
+          font-style: bold;
+          font-family: "Coiny";
+          font-size: 20px;
+          text-transform: uppercase;
+          font-weight: bolder;
+          text-decoration: none;
+}
+#feedback_continer{
+          width: 5vw;
+          height: 7vh;
           overflow: hidden;
-          width: 10%;
-          height: 10%;
-}
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
 
-#logo {}
+
+}
+#feedback_continer img{
+          height: 20px;
+}
