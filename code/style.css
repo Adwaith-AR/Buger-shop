@@ -1,68 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Rubik+Bubbles&display=swap');
+
+
+*,
+*::after,
+*::before {
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+}
+
+
 body {
-          padding: 0px;
-          margin: 0px;
-          background: #000;
+          background-color: black;
+          overflow: hidden;
 
 }
 
 header {
-          margin: 0px;
-          padding: 0px;
-         
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          align-items: center;
-          border-color: white;
-          border-bottom-style:solid;
-          border-radius: 20px;
-}
-
-nav {
-          height: 7vh;
-          width: 100vw;
-          margin: 10px;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          
+          position: absolute;
+          width: 100%;
+          z-index: 9999;
+          padding: 0 0;
+          top: 10px;
+          left: 0;
 
 
 }
 
 #logo {
-          width:7vw;
-          height: 4.5vh;
+          width: 100px;
 }
 
-
-#navigation_container{
-          width: 45vw;
-          background: #000;
-          height: 7vh;
-          align-items: center;
+header nav {
+          width: 90vw;
+          margin: 0 auto;
           display: flex;
           justify-content: space-between;
+          align-items: center;
 }
-#navigation_container a{
+
+header ul {
+          display: flex;
+          list-style: none;
+          align-items: center;
+}
+
+header ul a {
+          font-family: "Poppi", sans-serif;
+          transition: 1s;
+          text-decoration: none;
+          color: #ffff;
+          text-transform: uppercase;
+          padding: 0 1.5rem;
+          font-weight: 300;
+          font-size: 1rem;
+}
+
+header ul a:hover {
+          transition: 200ms;
+          color: #f98322;
+}
+
+header ul a img {
+          width: 10px;
+}
+
+.icon {
+          height: 20px;
+
+}
+
+#icons {
+          display: flex;
+          justify-content: center;
+          padding: 3px;
+}
+
+.icon:hover {
+          border-radius: 50px;
+          background-color: #818181;
+}
+
+main {
+          height: 100vh;
+          width: 100vw;
+          overflow: hidden;
+}
+
+h1 {
+          filter: drop-shadow(10px 0px 100px #ffffff96);
+          font-family: "Monoton", sans-serif;
+          text-transform: uppercase;
+          left: 9%;
+          font-size: 5vw;
+          position: absolute;
           color: white;
-          font-style: bold;
-          font-family: "Coiny";
+          top: 15%;
+}
+
+#buger {
+          filter: drop-shadow(10px 0px 200px #ffffff96);
+          position: absolute;
+          top: 5%;
+
+          left: 60%;
+}
+
+#order_button_container {
+          position: absolute;
+          top: 49%;
+          left: 9%;
+          display: flex;
+          justify-content: space-between;
+          width: 500px;
+}
+
+button {
+          filter: drop-shadow(10px 0px 50px #ffffff96);
+          width: 202px;
+          height: 104px;
+          background-color: rgba(0, 0, 0, 0);
+          border: solid #f98322 2px;
+          border-radius: 10px;
+          color: white;
           font-size: 20px;
           text-transform: uppercase;
-          font-weight: bolder;
-          text-decoration: none;
-}
-#feedback_continer{
-          width: 5vw;
-          height: 7vh;
-          overflow: hidden;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
+          font-family:"Rubik Bubbles" ;
 
-
-}
-#feedback_continer img{
-          height: 20px;
 }
