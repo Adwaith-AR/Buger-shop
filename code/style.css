@@ -91,7 +91,8 @@ h1 {
           filter: drop-shadow(10px 0px 100px #ffffff96);
           font-family: "Monoton", sans-serif;
           text-transform: uppercase;
-          left: 9%;
+          left: 9%; 
+          
           font-size: 5vw;
           position: absolute;
           color: white;
