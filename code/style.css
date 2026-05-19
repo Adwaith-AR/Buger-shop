@@ -140,6 +140,7 @@ button:hover {
 }
 
 #ordermenu_container {
+          transition: 2s;
           filter: drop-shadow(10px 0px 100px #ffffff96);
           display: flex;
           justify-content: space-around;
@@ -154,6 +155,7 @@ button:hover {
 
 #ordermenu_container:hover {
           overflow: visible;
+          transition: 200ms;
 }
 
 .ordermenu_child {
@@ -174,7 +176,7 @@ button:hover {
           transition: 200ms;
 }
 
-.ordermenu_img:hover {
+.ordermenu_child:hover .ordermenu_img {
           transition: 200ms;
           transform: translateY(-40px)
 }
