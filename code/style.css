@@ -92,7 +92,7 @@ h1 {
           font-family: "Monoton", sans-serif;
           text-transform: uppercase;
           left: 9%; 
-          
+
           font-size: 5vw;
           position: absolute;
           color: white;
@@ -134,7 +134,7 @@ button {
           display: flex;
           justify-content: space-around;
           align-items: center;
-          width: 40vw;
+          width: 40%;
           overflow: hidden;
           position: absolute;
           top: 67%;
