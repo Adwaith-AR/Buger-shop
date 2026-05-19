@@ -88,11 +88,11 @@ main {
 }
 
 h1 {
-          filter: drop-shadow(10px 0px 100px #ffffff96);
+
           font-family: "Monoton", sans-serif;
           text-transform: uppercase;
-          left: 9%; 
-
+          left: 9%;
+          filter: drop-shadow(10px 0px 80px #ffffff96);
           font-size: 5vw;
           position: absolute;
           color: white;
@@ -117,7 +117,7 @@ h1 {
 }
 
 button {
-          filter: drop-shadow(10px 0px 50px #ffffff96);
+          filter: drop-shadow(10px 0px 30px #ffffff96);
           width: 202px;
           height: 104px;
           background-color: rgba(0, 0, 0, 0);
@@ -127,10 +127,20 @@ button {
           font-size: 20px;
           text-transform: uppercase;
           font-family: "Rubik Bubbles";
+          transition: 100ms;
+
+}
+
+button:hover {
+          background-color: #ff9012;
+          filter: drop-shadow(0px 0px 10px #ff5e00);
+          transition: 100ms;
+          color: black;
 
 }
 
 #ordermenu_container {
+          filter: drop-shadow(10px 0px 100px #ffffff96);
           display: flex;
           justify-content: space-around;
           align-items: center;
@@ -138,13 +148,33 @@ button {
           overflow: hidden;
           position: absolute;
           top: 67%;
-          left:7%;
-          
+          left: 7%;
+
 }
-.ordermenu_child{
+
+#ordermenu_container:hover {
+          overflow: visible;
+}
+
+.ordermenu_child {
           border: solid #848484 2px;
           border-radius: 20px;
+          transition: 200ms;
 }
-.ordermenu_img{
+
+.ordermenu_child:hover {
+          border: solid #ff5e00 2px;
+          scale: 1.1;
+          transition: 200ms;
+}
+
+
+.ordermenu_img {
           width: 150px;
+          transition: 200ms;
+}
+
+.ordermenu_img:hover {
+          transition: 200ms;
+          transform: translateY(-40px)
 }
