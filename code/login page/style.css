@@ -126,12 +126,12 @@ main {
 
           margin-top: 10px;
           margin-bottom: 20px;
-          opacity: 0.6;
+          opacity: 0.8;
 }
 
 input {
-          width: 90%;
-          height: 15%;
+          width: 95%;
+          height: 13%;
           background: #1a1a1a;
           outline: none;
           border: none;
@@ -147,14 +147,16 @@ input::placeholder {
 }
 
 button {
+          background: linear-gradient(135deg, #ff9f1a, #ff6a00);
           font-family: "Poppi", sans-serif;
-          font-weight: bolder;
-          font-size: 18px;
-          width: 90%;
-          height: 15%;
+          font-weight: 1000;
+          font-size: 15px;
+          width: 95%;
+          height: 13%;
           margin-top: 30px;
           border-radius: 9px;
-          background: #ff9012;
+          border: none;
+
 }
 
 #DivertLinkContainer {
