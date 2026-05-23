@@ -11,7 +11,7 @@
 
 
 body {
-          background-color: black;
+          background:radial-gradient(circle at top left, #1c1c1c, #000);;
           overflow: hidden;
 
 }
