@@ -67,3 +67,6 @@ button{font-weight: 1000;
           background: linear-gradient(135deg ,#ff8c00, #ff5e00);
           border: none;
 }
+a{
+          text-decoration: none;
+}
