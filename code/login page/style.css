@@ -130,6 +130,7 @@ main {
 }
 
 input {
+          font-size: 20px;
           width: 95%;
           height: 13%;
           background: #1a1a1a;
@@ -139,7 +140,7 @@ input {
           margin-top: 30px;
           color: white;
           padding: 14px;
-}
+} 
 
 input::placeholder {
           font-size: 17px;
@@ -193,4 +194,8 @@ button {
 
 span {
           color: white;
+}
+.red_place_holder::placeholder{
+          color: red;
+          opacity: 1;
 }
