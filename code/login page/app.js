@@ -1,31 +1,64 @@
-console.log("poda");
+const userName = document.getElementById("userName");
+const userPassword = document.getElementById("password");
+const passBtn = document.getElementById("passBtn");
+const imgInvisible = document.getElementById("imgInVisible");
+const imgVisible = document.getElementById("imgVisible");
+const submitBtn = document.getElementById("button")
 
 
-document.getElementById("button").onclick = function () {
-          if (document.getElementById("userName").value == "") {
-                    document.getElementById("userName").placeholder = "Enter user name";
-                    document.getElementById("userName").classList.add("red_place_holder");
+
+
+let passVisibility = false;
+
+imgVisible.classList.add("invisibility")
+
+submitBtn.onclick = function () {
+          if (userName.value == "") {
+                    userName.placeholder = "Enter user name";
+                     userName.classList.add("red_place_holder", "orange_border");
+                    
                     setTimeout(() => {
-                              document.getElementById("userName").classList.remove("red_place_holder");
-                              document.getElementById("userName").placeholder = "Username or Email";
+                              userName.classList.remove("red_place_holder");
+                              userName.placeholder = "Username or Email";
                     }, 2000);
+
 
 
           }
-          else if (document.getElementById("password").value == "") {
+          else if (userPassword.value == "") {
 
-                    document.getElementById("password").placeholder = `Enter Your Password`;
-                    document.getElementById("password").classList.add("red_place_holder");
-                    setTimeout(() => { 
-                              document.getElementById("password").classList.remove("red_place_holder"); 
-                              document.getElementById("password").placeholder = `Password`;
+                    userPassword.placeholder = `Enter Your Password`;
+                    userPassword.classList.add("red_place_holder");
+                    setTimeout(() => {
+                              userPassword.classList.remove("red_place_holder");
+                              userPassword.placeholder = `Password`;
                     }, 2000);
-                    
-                    
+
+
 
 
           }
           else {
+                    userName.value = "";
+                    userPassword.value = "";
                     window.alert("You have Logged In");
+          }
+}
+
+
+
+passBtn.onclick = function () {
+          if (passVisibility) {
+                    passVisibility = false;
+                    imgVisible.classList.add("invisibility")
+                    imgInvisible.classList.remove("invisibility")
+                    userPassword.type = "password"
+          }
+          else {
+                    userPassword.type = "text"
+                    passVisibility = true;
+                    imgVisible.classList.remove("invisibility")
+                    imgInvisible.classList.add("invisibility")
+
           }
 }

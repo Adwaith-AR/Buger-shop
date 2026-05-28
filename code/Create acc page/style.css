@@ -94,7 +94,7 @@ main {
           text-align: center;
           height: 60%;
           border-radius: 15px;
-          overflow: hidden;
+          overflow: hide;
           background: black;
           width: 25%;
           padding: 28px;
@@ -119,12 +119,13 @@ span {
           color: #f98322;
 }
 
-input {
+.input {
           margin-bottom: 30px;
           height: 10%;
           width: 90%;
           border-radius: 12px;
           border: none;
+          outline: none;
           background: #1a1a1a;
           padding: 20px;
           color: #f98322;
@@ -132,25 +133,58 @@ input {
 
 }
 
+.passContainer {
+          height: 11%;
+          width: 90%;
+          display: grid;
+          grid-template-columns: 4fr 1fr;
+          margin-bottom: 30px;
+          margin-left: 19px;
+          gap: 5px;
+
+}
+
+.passinput {
+          width: 100%;
+          border: none;
+          outline: none;
+          color: #f98322;
+          padding: 20px;
+          border-radius: 12px;
+          background: #1a1a1a;
+          font-size: 18px;
+
+}
+
+.passBtn {
+          
+          border: none;
+          background: #1a1a1a;
+          border-radius: 12px;
+          padding: 14px;
+}
+
 input::placeholder {
           font-size: 15px;
 
 }
 
-button {background: linear-gradient(135deg, #fea425, #db5b00);
+#createBtn {
+          background: linear-gradient(135deg, #fea425, #db5b00);
           border: none;
           height: 11%;
           border-radius: 12px;
           width: 90%;
-         
+
           font-family: "Poppi", sans-serif;
           font-size: 17px;
-          font-weight: 1000;transition: 100ms;
-          
+          font-weight: 1000;
+          transition: 100ms;
+
 
 }
 
-button:hover {
+#createBtn:hover {
           transition: 100ms;
           scale: 1.05;
           filter: drop-shadow(0px 0px 10px #f98322);
@@ -163,4 +197,16 @@ a {
           font-family: "Poppi", sans-serif;
           color: #f98322;
           text-decoration: none;
+}
+
+.red_placeholder::placeholder {
+          color: red;
+          font-size: 18px;
+}
+
+.orange_border {
+          border: solid 2px red;
+}
+.invisible{
+          display: none;
 }

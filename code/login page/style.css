@@ -94,12 +94,18 @@ main {
           background-color: black;
           border-radius: 15px;
           text-align: center;
-          height: 50%;
-          width: 19%;
+          height: 55%;
+          width: 20%;
           top: 10%;
           position: relative;
           filter: drop-shadow(0px 0px 13px#835317);
+          transition: 200ms;
 
+}
+
+#login_container:hover {
+          scale: 1.1;
+          transition: 200ms;
 }
 
 #h1 {
@@ -129,7 +135,7 @@ main {
           opacity: 0.8;
 }
 
-input {
+#userName {
           font-size: 20px;
           width: 95%;
           height: 13%;
@@ -140,14 +146,48 @@ input {
           margin-top: 30px;
           color: white;
           padding: 14px;
-} 
+}
 
 input::placeholder {
           font-size: 17px;
           font-weight: 500;
 }
 
-button {
+#passwordContainer {
+          margin-top: 30px;
+          margin-left: 10px;
+          width: 93%;
+          height: 13%;
+          display: grid;
+          grid-template-columns: 3fr 1fr;
+          gap: 5px;
+
+}
+
+#password {
+          font-size: 20px;
+          background: #1a1a1a;
+          outline: none;
+          border: none;
+          width: 100%;
+          border-radius: 9px;
+          color: white;
+          padding: 14px;
+}
+
+#passBtn {
+          border: none;
+          background: #1a1a1a;
+          border-radius: 9px;
+          padding: 14px;
+
+}
+
+.invisibility {
+          display: none;
+}
+
+#button {
           background: linear-gradient(135deg, #ff9f1a, #ff6a00);
           font-family: "Poppi", sans-serif;
           font-weight: 1000;
@@ -159,6 +199,7 @@ button {
           border: none;
 
 }
+
 
 #DivertLinkContainer {
           margin-top: 10px;
@@ -195,7 +236,13 @@ button {
 span {
           color: white;
 }
-.red_place_holder::placeholder{
+
+.red_place_holder::placeholder {
           color: red;
           opacity: 1;
+}
+
+
+.orange_border {
+          border: solid 2px red;
 }
