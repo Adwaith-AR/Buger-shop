@@ -128,7 +128,7 @@ span {
           outline: none;
           background: #1a1a1a;
           padding: 20px;
-          color: #f98322;
+          color: white;
           font-size: 18px;
 
 }
@@ -148,12 +148,12 @@ span {
           width: 100%;
           border: none;
           outline: none;
-          color: #f98322;
+          color: white;
           padding: 20px;
           border-radius: 12px;
           background: #1a1a1a;
           font-size: 18px;
-
+                
 }
 
 .passBtn {
