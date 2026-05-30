@@ -43,7 +43,7 @@ main {
 
 }
 
-img {
+#Burger {
           width: 80%;
           filter: drop-shadow(0px 0px 100px white);
 }
@@ -79,9 +79,10 @@ h3 {
 
 #product_quantity {
           display: grid;
-          grid-template-columns: 1fr 1fr 1fr;
-          width: 35%;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          width: 50%;
           height: 12%;
+          gap: 5px;
 }
 
 .quantity_button {
@@ -92,6 +93,7 @@ h3 {
           background: #222;
           font-family: "Poppi", sans-serif;
 }
+
 
 h5 {
           text-align: center;
@@ -127,4 +129,18 @@ h5 {
 #b2 {
           color: white;
           background: #222;
+}
+
+.orientation {
+          grid-template-columns: 1fr 1fr 1fr;
+          width: 35%;
+
+}
+
+.invisibility {
+          display: none;
+
+}
+button{
+          cursor: pointer;
 }

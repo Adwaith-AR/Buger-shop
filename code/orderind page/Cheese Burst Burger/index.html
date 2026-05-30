@@ -16,15 +16,18 @@
                                         <img id="logo" src="../img/logo.webp" alt="logo">
                                         <ul>
                                                   <li><a href="https://buger-shop-six.vercel.app/">home</a></li>
-                                                  <li><a href="https://buger-shop-six.vercel.app/Ordering%20meanu/index.html">menu</a></li>
-                                                  <li><a href="https://buger-shop-six.vercel.app/About%20Us/index.html">about</a></li>
-                                                  <li><a href="https://buger-shop-six.vercel.app/login%20page/index.html">login</a></li>
+                                                  <li><a href="https://buger-shop-six.vercel.app/Ordering%20meanu/index.html">menu</a>
+                                                  </li>
+                                                  <li><a href="https://buger-shop-six.vercel.app/About%20Us/index.html">about</a>
+                                                  </li>
+                                                  <li><a href="https://buger-shop-six.vercel.app/login%20page/index.html">login</a>
+                                                  </li>
 
                                         </ul>
                                         <ul id="icons">
-                                                  <li><a href=""><img src="../img/like (1).webp" alt=""></a></li>
-                                                  <li><a href=""><img src="../img/dislike.webp" alt=""></a></li>
-                                                  <li><a href=""><img src="../img/coment.webp" alt=""></a></li>
+                                                  <li><a href=""><img src="" alt=""></a></li>
+                                                  <li><a href=""><img src="" alt=""></a></li>
+                                                  <li><a href=""><img src="" alt=""></a></li>
                                         </ul>
 
                               </nav>
@@ -32,17 +35,18 @@
                     <main>
                               <div id="main_container">
                                         <div class="child1">
-                                                  <img src="../img//Cheese Burst Burger.webp" alt="">
+                                                  <img src="../img/Cheese Burst Burger.webp" id="Burger" alt="">
                                         </div>
                                         <div class="child2">
-                                                  <h1>Cheese <span>Burst Burger</span></h1>
+                                                  <h1>Cheese Burst Burger <span></span></h1>
                                                   <p>Juicy grilled beef patty layered with fresh lettuce,<br> tomatoes,
-                                                            melted cheese, and our signature Travelo <br>sauce.</p>
-                                                  <h3>₹199</h3>
+                                                            melted cheese, and our signature Travel <br>sauce.</p>
+                                                  <h3 id="productPrice">₹240</h3>
                                                   <div id="product_quantity">
-                                                            <button class="quantity_button">-</button>
-                                                            <h5>1</h5>
-                                                            <button class="quantity_button">+</button>
+                                                            <button id="incrementBtn" class="quantity_button">-</button>
+                                                            <h5 id="productQuantity">1</h5>
+                                                            <button id="decrementBtn"class="quantity_button">+</button>
+                                                            <button id="deleteBtn"class="quantity_button"><img src="../img/Bin.png" id="img" alt=""></button>
                                                   </div>
                                                   <div id="button_container">
                                                             <button class="button" id="b1">Add to Card</button>
@@ -52,7 +56,7 @@
                                         </div>
                               </div>
                     </main>
-
+                    <script src="app.js"></script>
           </body>
 
 </html>
