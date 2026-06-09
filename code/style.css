@@ -147,16 +147,10 @@ button:hover {
           justify-content: space-around;
           align-items: center;
           width: 40%;
-          overflow: hidden;
           position: absolute;
           top: 67%;
           left: 7%;
 
-}
-
-#ordermenu_container:hover {
-          overflow: visible;
-          transition: 200ms;
 }
 
 .ordermenu_child {

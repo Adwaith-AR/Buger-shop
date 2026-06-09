@@ -1,4 +1,5 @@
 main {
+          font-family: "Poppi", sans-serif;
           height: 100vh;
           width: 100%;
           display: flex;
@@ -43,8 +44,9 @@ main {
 
 }
 
-#Burger {
-          width: 80%;
+
+.burger {
+          width: 545px;
           filter: drop-shadow(0px 0px 100px white);
 }
 
@@ -106,6 +108,35 @@ h5 {
           font-family: "Poppi", sans-serif;
 }
 
+#productItems {
+          display: flex;
+          gap: 10px;
+          align-items: center;
+          justify-content: space-evenly;
+}
+#productItems label{
+          color: white;
+          font-size: 1em;
+          text-transform: uppercase;
+}
+#productItems input {
+          width: 20px;
+          height: 20px;
+          appearance: none;
+          border: 2px solid #555;
+          background-color: #333;
+          border-radius: 4px;
+          cursor: pointer;
+}
+#productItems input:checked{
+          background-color: #ff7300;
+}
+
+.hide{
+          display: none;
+
+}
+
 #button_container {
           height: 25%;
           gap: 15px;
@@ -141,6 +172,7 @@ h5 {
           display: none;
 
 }
-button{
+
+button {
           cursor: pointer;
 }
