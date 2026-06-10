@@ -1,3 +1,31 @@
+@keyframes blur {
+          0%{
+                    filter: blur(0px);
+          }
+          100%{
+                    filter: blur(50px);
+          }
+          
+}
+
+@keyframes anti_blur {
+          0% {
+                    filter: blur(50px);
+          }
+
+          100% {
+                    filter: blur(0px);
+          }
+
+}
+
+
+
+
+
+
+
+
 main {
           font-family: "Poppi", sans-serif;
           height: 100vh;
@@ -19,7 +47,9 @@ main {
 }
 
 .child1 {
-
+          
+height: 50vh;
+          width: 45vw;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -28,11 +58,18 @@ main {
 
 
 }
+.blur{
+         animation: blur 200ms ;
+         animation-fill-mode:forwards ;
+}
+.anti_blur {
+          animation: anti_blur 200ms;
+          animation-fill-mode: forwards;
+}
 
 .child2 {
 
           position: relative;
-          top: 70px;
           height: 50vh;
           width: 45vw;
           padding: 20px;
