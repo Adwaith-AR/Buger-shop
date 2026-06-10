@@ -97,6 +97,7 @@ function hideBurger() {
           burger.classList.add("hide");
 
 
+          
 }
 hideBurger();
 burger.classList.remove("hide");
