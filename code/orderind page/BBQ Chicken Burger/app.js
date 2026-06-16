@@ -460,63 +460,6 @@ S.onclick = function () {
           burgerContainer.classList.remove("anti_blur")
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 let productQuantity = 1;
 
 let productCost = Number(productShowPrice.textContent.slice(1));
@@ -563,7 +506,7 @@ setInterval(() => {
                     deleteBtn.classList.add("invisibility");
 
           }
-}, 100); // Checks every 100ms
+}, 100);
 
 
 CartBtn.onclick = function () {
