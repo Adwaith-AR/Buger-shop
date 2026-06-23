@@ -7,7 +7,7 @@ On a personal note, this is also a practice project I put together to brush up o
 ## Live Demo
 Check out the live website here: [Burger Shop](https://buger-shop-six.vercel.app/)
 
-## ✨ Features
+## Features
 - **Aesthetic UI:** A clean, theme-based design that makes use think it is ai :).
 - **Customizable Burgers:** Let users build and customize their orders exactly how they want them.
 - **Interactive Alerts:** Simple pop-ups and notifications to let users know what's happening.
