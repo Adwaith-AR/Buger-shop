@@ -1,11 +1,12 @@
 @keyframes blur {
-          0%{
+          0% {
                     filter: blur(0px);
           }
-          100%{
+
+          100% {
                     filter: blur(50px);
           }
-          
+
 }
 
 @keyframes anti_blur {
@@ -47,8 +48,8 @@ main {
 }
 
 .child1 {
-          
-height: 50vh;
+
+          height: 50vh;
           width: 45vw;
           display: flex;
           align-items: center;
@@ -58,10 +59,12 @@ height: 50vh;
 
 
 }
-.blur{
-         animation: blur 200ms ;
-         animation-fill-mode:forwards ;
+
+.blur {
+          animation: blur 200ms;
+          animation-fill-mode: forwards;
 }
+
 .anti_blur {
           animation: anti_blur 200ms;
           animation-fill-mode: forwards;
@@ -82,7 +85,8 @@ height: 50vh;
 }
 
 
-.burger {
+.burgerimg {
+          aspect-ratio: 16/16;
           width: 545px;
           filter: drop-shadow(0px 0px 100px white);
 }
@@ -151,25 +155,20 @@ h5 {
           align-items: center;
           justify-content: space-evenly;
 }
-#productItems label{
+
+#productItems label {
           color: white;
+          border-radius: 10px;
+          background: #141414;
           font-size: 1em;
+          padding: 10px 20px;
           text-transform: uppercase;
 }
 #productItems input {
-          width: 20px;
-          height: 20px;
-          appearance: none;
-          border: 2px solid #555;
-          background-color: #333;
-          border-radius: 4px;
-          cursor: pointer;
-}
-#productItems input:checked{
-          background-color: #ff7300;
+          display: none;
 }
 
-.hide{
+.hide {
           display: none;
 
 }
@@ -212,4 +211,10 @@ h5 {
 
 button {
           cursor: pointer;
+}
+
+.item_selected {
+          color: black !important;
+          font-weight: 600;
+          background: linear-gradient(90deg, #ffc800, #ff7300) !important;
 }

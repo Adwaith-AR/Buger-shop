@@ -49,11 +49,30 @@ const T = document.getElementById("tomatoes");
 const L = document.getElementById("lettuce");
 const S = document.getElementById("ketchup");
 
+const labelC = document.getElementById("labelC");
+const labelO = document.getElementById("labelO");
+const labelT = document.getElementById("labelT");
+const labelL = document.getElementById("labelL");
+const labelS = document.getElementById("labelS");
+labelC.classList.add("item_selected")
+labelO.classList.add("item_selected")
+labelT.classList.add("item_selected")
+labelL.classList.add("item_selected")
+labelS.classList.add("item_selected")
+
 C.checked = true
 O.checked = true
 T.checked = true
 L.checked = true
 S.checked = true
+
+let CBtnState = true
+let OBtnState = true
+let TBtnState = true
+let LBtnState = true
+let SBtnState = true
+
+
 
 let items = clost;
 
@@ -405,6 +424,15 @@ function collectData() {
 
 
 C.onclick = function () {
+          if (CBtnState) {
+                    CBtnState = false;
+                    labelC.classList.remove("item_selected")
+          }
+          else {
+                    CBtnState = true;
+                    labelC.classList.add("item_selected")
+
+          }
           burgerContainer.classList.add("blur")
 
           setTimeout(() => {
@@ -416,6 +444,15 @@ C.onclick = function () {
           burgerContainer.classList.remove("anti_blur")
 }
 O.onclick = function () {
+          if (OBtnState) {
+                    OBtnState = false;
+                    labelO.classList.remove("item_selected")
+          }
+          else {
+                    OBtnState = true;
+                    labelO.classList.add("item_selected")
+
+          }
           burgerContainer.classList.add("blur")
 
           setTimeout(() => {
@@ -427,6 +464,15 @@ O.onclick = function () {
           burgerContainer.classList.remove("anti_blur")
 }
 T.onclick = function () {
+          if (TBtnState) {
+                    TBtnState = false;
+                    labelT.classList.remove("item_selected")
+          }
+          else {
+                    TBtnState = true;
+                    labelT.classList.add("item_selected")
+
+          }
           burgerContainer.classList.add("blur")
 
           setTimeout(() => {
@@ -438,6 +484,15 @@ T.onclick = function () {
           burgerContainer.classList.remove("anti_blur")
 }
 L.onclick = function () {
+          if (CBtnState) {
+                    CBtnState = false;
+                    labelC.classList.remove("item_selected")
+          }
+          else {
+                    CBtnState = true;
+                    labelC.classList.add("item_selected")
+
+          }
           burgerContainer.classList.add("blur")
 
           setTimeout(() => {
@@ -449,6 +504,15 @@ L.onclick = function () {
           burgerContainer.classList.remove("anti_blur")
 }
 S.onclick = function () {
+          if (CBtnState) {
+                    CBtnState = false;
+                    labelC.classList.remove("item_selected")
+          }
+          else {
+                    CBtnState = true;
+                    labelC.classList.add("item_selected")
+
+          }
           burgerContainer.classList.add("blur")
 
           setTimeout(() => {
