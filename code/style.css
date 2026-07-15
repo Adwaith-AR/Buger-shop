@@ -186,7 +186,7 @@ button:hover {
 
           #buger {
                     align-self: flex-end;
-                    transform: translateY(-30px);
+                    transform: translateY(-40px);
                     width: 90vw;
                     filter: drop-shadow(10px 0px 200px #ffffff96);
                     position: static;
@@ -209,6 +209,7 @@ button:hover {
                     position: static;
                     justify-content: center;
                     gap: 30px;
+                    transform: translateY(-130px);
           }
 
           button {
@@ -220,13 +221,11 @@ button:hover {
           }
 
           #ordermenu_container {
-                    transition: 2s;
-                    filter: drop-shadow(10px 0px 100px #ffffff96);
                     display: flex;
                     justify-content: space-around;
-                    background: red;
                     align-items: center;
                     width: 90vw;
+                    gap: 5px;
                     position: static;
                     transform: translateY(-80px);
 
