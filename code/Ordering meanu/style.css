@@ -58,11 +58,11 @@ p {
           font-family: "Poppi", sans-serif;
           font: 12px;
           opacity: 0.6;
-          font-weight: 100;
+          font-weight: 600;
 }
 
 h3 {
-          font-weight: 100;
+          font-weight: 600;
           margin-bottom: 10px;
           font-family: "Poppi", sans-serif;
           color: #f98322;
@@ -96,7 +96,7 @@ a {
                     height: 40vh;
                     text-align: center;
                     padding: 20px;
-                    display:flex;
+                    display: flex;
                     align-items: center;
                     justify-content: center;
                     place-items: center;
@@ -105,10 +105,10 @@ a {
           }
 
           .grid_child img {
-width: 50vw;
+                    width: 50vw;
           }
-
-          .grid_child div {
-
-          }
+button{
+          width: 20vw;
+          height: 4vh;
+}
 }
