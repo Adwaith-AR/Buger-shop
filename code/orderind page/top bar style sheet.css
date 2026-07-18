@@ -17,8 +17,8 @@ body {
 }
 
 header {
-          position: relative;
-          width: 100%;
+          position: absolute;
+          width: 100vw;
           z-index: 9999;
           padding: 0 0;
           top: 10px;
@@ -29,13 +29,15 @@ header {
 }
 
 #logo {
-          width: 100px;
+          width: min(100px,20vw);
 }
 
 header nav {
           width: 90vw;
           margin: 0 auto;
+          overflow: hidden;
           display: flex;
+          flex-wrap: wrap;
           justify-content: space-between;
           align-items: center;
 }
@@ -54,7 +56,7 @@ header ul a {
           text-transform: uppercase;
           padding: 0 1.5rem;
           font-weight: 300;
-          font-size: 1rem;
+          font-size: min(2vw,1em);
 }
 
 header ul a:hover {
