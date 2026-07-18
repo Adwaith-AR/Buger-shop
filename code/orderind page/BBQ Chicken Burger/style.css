@@ -151,6 +151,8 @@ h5 {
 
 #productItems {
           display: flex;
+          flex-wrap: wrap;
+          margin: 10px;
           gap: 10px;
           align-items: center;
           justify-content: space-evenly;
@@ -164,6 +166,7 @@ h5 {
           padding: 10px 20px;
           text-transform: uppercase;
 }
+
 #productItems input {
           display: none;
 }
@@ -217,4 +220,82 @@ button {
           color: black !important;
           font-weight: 600;
           background: linear-gradient(90deg, #ffc800, #ff7300) !important;
+}
+
+@media screen and (max-width:767px) {
+          #main_container {
+                    position: static;
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    overflow: auto;
+
+
+          }
+
+          .child2 {
+                    width: 20vw;
+                    height: 20vh;
+                    background: red;
+                    overflow: hidden;
+          }
+
+          .burgerimg {
+                    width: 70vw;
+                    filter: drop-shadow(0px 0px 50px rgba(255, 255, 255, 0.54));
+          }
+
+          .child2 {
+
+                    position: relative;
+                    height: 50vh;
+                    width: 90%;
+                    padding: 20px;
+                    background: black;
+                    border-radius: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+
+          }
+
+          h1 {
+                    font-size: 30px;
+          }
+
+          #product_quantity {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr 1fr;
+                    width: 50%;
+                    height: 10%;
+                    gap: 5px;
+          }
+
+          #productItems label {
+                    color: white;
+                    border-radius: 5px;
+                    background: #141414;
+                    font-size: 15px;
+                    padding: 5px 10px;
+                    text-transform: uppercase;
+          }
+
+          #button_container {
+                    height: 10%;
+                    gap: 15px;
+                    background: red;
+                    width: 100%;
+                    display: flex;
+          }
+
+          .button {
+                    font-weight: 600;
+                    border: none;
+                    width: 100%;
+                    border-radius: 10px;
+                    font-size: 15px;
+          }
 }
