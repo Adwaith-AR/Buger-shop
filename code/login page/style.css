@@ -1,39 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Monoton&family=Rubik+Bubbles&display=swap');
 
 
-* {
-          margin: 0;
+*,
+*::after,
+*::before {
           padding: 0;
+          margin: 0;
           box-sizing: border-box;
-          font-family: 'Poppins', sans-serif;
 }
 
 
 body {
-          background-color: #0f0f0f;
+          background: radial-gradient(circle at top left, #1c1c1c, #000);
+          ;
           overflow: hidden;
 
 }
 
 header {
           position: absolute;
-          width: 100%;
+          width: 100vw;
           z-index: 9999;
           padding: 0 0;
           top: 10px;
           left: 0;
+          height: 7vh;
 
 
 }
 
 #logo {
-          width: 100px;
+          width: min(100px, 20vw);
 }
 
 header nav {
           width: 90vw;
           margin: 0 auto;
+          overflow: hidden;
           display: flex;
+          flex-wrap: wrap;
           justify-content: space-between;
           align-items: center;
 }
@@ -46,13 +51,13 @@ header ul {
 
 header ul a {
           font-family: "Poppi", sans-serif;
-
+          transition: 1s;
           text-decoration: none;
           color: #ffff;
           text-transform: uppercase;
           padding: 0 1.5rem;
           font-weight: 300;
-          font-size: 1rem;
+          font-size: min(2vw, 1em);
 }
 
 header ul a:hover {
@@ -79,7 +84,6 @@ header ul a img {
           border-radius: 50px;
           background-color: #818181;
 }
-
 main {
           width: 100%;
           height: 100vh;
@@ -245,4 +249,10 @@ span {
 
 .orange_border {
           border: solid 2px red;
+}
+
+@media screen and (max-width:767px) {
+          #login_container {
+                    width: 90%;
+          }
 }

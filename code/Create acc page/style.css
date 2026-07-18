@@ -11,30 +11,34 @@
 
 
 body {
-          background-color: #0f0f0f;
+          background: radial-gradient(circle at top left, #1c1c1c, #000);
+          ;
           overflow: hidden;
 
 }
 
 header {
           position: absolute;
-          width: 100%;
+          width: 100vw;
           z-index: 9999;
           padding: 0 0;
           top: 10px;
           left: 0;
+          height: 7vh;
 
 
 }
 
 #logo {
-          width: 100px;
+          width: min(100px, 20vw);
 }
 
 header nav {
           width: 90vw;
           margin: 0 auto;
+          overflow: hidden;
           display: flex;
+          flex-wrap: wrap;
           justify-content: space-between;
           align-items: center;
 }
@@ -53,7 +57,7 @@ header ul a {
           text-transform: uppercase;
           padding: 0 1.5rem;
           font-weight: 300;
-          font-size: 1rem;
+          font-size: min(2vw, 1em);
 }
 
 header ul a:hover {
@@ -153,11 +157,11 @@ span {
           border-radius: 12px;
           background: #1a1a1a;
           font-size: 18px;
-                
+
 }
 
 .passBtn {
-          
+
           border: none;
           background: #1a1a1a;
           border-radius: 12px;
@@ -207,6 +211,21 @@ a {
 .orange_border {
           border: solid 2px red;
 }
-.invisible{
+
+.invisible {
           display: none;
+}
+
+@media screen and (max-width:767px) {
+          #main_container {
+                    text-align: center;
+                    height: 70%;
+                    border-radius: 15px;
+                    overflow: hide;
+                    background: black;
+                    width: 90%;
+                    padding: 28px;
+                    transition: 200ms;
+                    filter: drop-shadow(0px 0px 13px #f98322);
+          }
 }
