@@ -484,13 +484,13 @@ T.onclick = function () {
           burgerContainer.classList.remove("anti_blur")
 }
 L.onclick = function () {
-          if (CBtnState) {
-                    CBtnState = false;
-                    labelC.classList.remove("item_selected")
+          if (LBtnState) {
+                    LBtnState = false;
+                    labelL.classList.remove("item_selected")
           }
           else {
-                    CBtnState = true;
-                    labelC.classList.add("item_selected")
+                    LBtnState = true;
+                    labelL.classList.add("item_selected")
 
           }
           burgerContainer.classList.add("blur")
@@ -504,13 +504,13 @@ L.onclick = function () {
           burgerContainer.classList.remove("anti_blur")
 }
 S.onclick = function () {
-          if (CBtnState) {
-                    CBtnState = false;
-                    labelC.classList.remove("item_selected")
+          if (SBtnState) {
+                    SBtnState = false;
+                    labelS.classList.remove("item_selected")
           }
           else {
-                    CBtnState = true;
-                    labelC.classList.add("item_selected")
+                    SBtnState = true;
+                    labelS.classList.add("item_selected")
 
           }
           burgerContainer.classList.add("blur")
