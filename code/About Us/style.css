@@ -26,17 +26,28 @@
 }
 
 
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Rubik+Bubbles&display=swap');
+
+
+*,
+*::after,
+*::before {
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+}
+
 
 body {
-          background: radial-gradient(#000000, #232323);
-
-          overflow: hidden;
+          background: radial-gradient(circle at top left, #1c1c1c, #000);
+          height: 100vh;
+          overflow: auto;
 
 }
 
 header {
-          position: relative;
-          width: 100%;
+          position: absolute;
+          width: 100vw;
           z-index: 9999;
           padding: 0 0;
           top: 10px;
@@ -47,13 +58,15 @@ header {
 }
 
 #logo {
-          width: 100px;
+          width: min(100px, 20vw);
 }
 
 header nav {
           width: 90vw;
           margin: 0 auto;
+          overflow: hidden;
           display: flex;
+          flex-wrap: wrap;
           justify-content: space-between;
           align-items: center;
 }
@@ -72,7 +85,7 @@ header ul a {
           text-transform: uppercase;
           padding: 0 1.5rem;
           font-weight: 300;
-          font-size: 1rem;
+          font-size: min(2vw, 1em);
 }
 
 header ul a:hover {
@@ -101,8 +114,9 @@ header ul a img {
 }
 
 main {
+          margin-top: 100px;
           position: relative;
-          height: 100vh;
+          height: auto;
           width: 100%;
           text-align: center;
 
@@ -241,4 +255,64 @@ h4 {
           text-align: start;
           font-weight: 300;
           letter-spacing: 1px;
+}
+
+@media screen and (max-width:767px) {
+          #detail_container {
+                    justify-self: center;
+                    margin-top: 20px;
+                    left: 0%;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 90vw;
+                    height: auto;
+
+
+          }
+
+          #logo_card {
+
+                    width: 90vw;
+                    height: 20vh;
+                    display: flex;
+          }
+
+          #brand_details {
+                    width: 90vw;
+                    height: 35vh;
+                    padding: 00px;
+                    padding-right: 0px;
+                    text-align: left;
+          }
+
+          h2 {
+                    text-align: center;
+                    margin-left: 0%;
+                    margin-top: 10px;
+                    color: white;
+          }
+
+          #review_container {
+                    justify-self: center;
+                    gap: 20px;
+                    justify-content: center;
+                    width: 90vw;
+                    flex-wrap: wrap;
+                    height: 20vh;
+                    left: 0%;
+
+          }
+
+          .review_child {
+                    width: auto;
+                    height: 18vh;
+                    background: rgb(29, 29, 29);
+                    border-radius: 12px;
+                    padding: 25px;
+                    transition: 200ms;
+
+          }
 }
