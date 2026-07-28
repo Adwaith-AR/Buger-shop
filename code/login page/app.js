@@ -6,7 +6,7 @@ const imgVisible = document.getElementById("imgVisible");
 const submitBtn = document.getElementById("button")
 
 
-localStorage.setItem("username" , "poda mone")
+localStorage.setItem("username")
 
 let passVisibility = false;
 
