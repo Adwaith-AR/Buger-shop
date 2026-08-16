@@ -82,7 +82,7 @@ main {
           justify-content: space-around;
 
 }
-
+#nothing{visibility: hidden;}
 
 .burgerimg {
           aspect-ratio: 16/16;
@@ -92,7 +92,7 @@ main {
 
 h1 {
           color: white;
-          font-weight: 1000;
+          font-weight: 1000 ;
           letter-spacing: 1px;
           font-family: "Poppi", sans-serif;
           font-size: 35px;
