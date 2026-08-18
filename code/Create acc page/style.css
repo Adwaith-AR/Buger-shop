@@ -1,5 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Monoton&family=Rubik+Bubbles&display=swap');
 
+[data-theme="dark"] {
+          --bg: #141414;
+          --Container: black;
+          --subContainer: #1a1a1a;
+
+          --text: #e5e7eb;
+          --orange: #f98322;
+          --orangeDark: #ff6a00;
+          --gray: #ffffff96;
+          --lightShade: #121628;
+          --darkShade: #04060a;
+
+}
+
+[data-theme="light"] {
+          --bg: #e0e0e0;
+          --Container: white;
+          --subContainer: #c6c6c6;
+          --text: black;
+          --orange: #f98322;
+          --orangeDark: #ff6a00;
+          --gray: #b3b0b096;
+          --lightShade: #f1f1f1;
+          --darkShade: #cbcbcb;
+
+}
 
 *,
 *::after,
@@ -11,8 +37,7 @@
 
 
 body {
-          background: radial-gradient(circle at top left, #1c1c1c, #000);
-          ;
+          background: var(--bg);
           overflow: hidden;
 
 }
@@ -53,7 +78,7 @@ header ul a {
           font-family: "Poppi", sans-serif;
           transition: 1s;
           text-decoration: none;
-          color: #ffff;
+          color: var(--text);
           text-transform: uppercase;
           padding: 0 1.5rem;
           font-weight: 300;
@@ -62,27 +87,34 @@ header ul a {
 
 header ul a:hover {
           transition: 200ms;
-          color: #f98322;
+          color: var(--orange);
 }
 
 header ul a img {
           width: 10px;
 }
 
-.icon {
-          height: 20px;
-
-}
-
-#icons {
+#themeBtn {
+          background-color: var(--bg);
+          border: solid var(--orange) 2px;
+          border-radius: 10px;
+          transition: 100ms;
+          width: 40px;
+          height: 40px;
+          transition: 300ms;
           display: flex;
+          align-items: center;
           justify-content: center;
-          padding: 3px;
 }
 
-.icon:hover {
-          border-radius: 50px;
-          background-color: #818181;
+#themeBtn img {
+          width: 40px;
+          height: 40px;
+}
+
+#themeBtn:hover {
+          transition: 300ms;
+          background-color: var(--orange);
 }
 
 main {
@@ -99,7 +131,7 @@ main {
           height: 60%;
           border-radius: 15px;
           overflow: hide;
-          background: black;
+          background: var(--Container);
           width: 25%;
           padding: 28px;
           transition: 200ms;
@@ -114,13 +146,13 @@ main {
 h1 {
           font-family: "Monoton";
           font-weight: 300;
-          color: white;
+          color: var(--text);
           letter-spacing: -1px;
           margin-bottom: 30px;
 }
 
 span {
-          color: #f98322;
+          color: var(--orange);
 }
 
 .input {
@@ -130,9 +162,9 @@ span {
           border-radius: 12px;
           border: none;
           outline: none;
-          background: #1a1a1a;
+          background: var(--subContainer);
           padding: 20px;
-          color: white;
+          color: var(--text);
           font-size: 18px;
 
 }
@@ -152,10 +184,10 @@ span {
           width: 100%;
           border: none;
           outline: none;
-          color: white;
+          color: var(--text);
           padding: 20px;
           border-radius: 12px;
-          background: #1a1a1a;
+          background: var(--subContainer);
           font-size: 18px;
 
 }
@@ -163,7 +195,7 @@ span {
 .passBtn {
 
           border: none;
-          background: #1a1a1a;
+          background: var(--subContainer);
           border-radius: 12px;
           padding: 14px;
 }
@@ -174,7 +206,7 @@ input::placeholder {
 }
 
 #createBtn {
-          background: linear-gradient(135deg, #fea425, #db5b00);
+          background: linear-gradient(135deg, var(--orange), var(--orangeDark));
           border: none;
           height: 11%;
           border-radius: 12px;
@@ -191,7 +223,7 @@ input::placeholder {
 #createBtn:hover {
           transition: 100ms;
           scale: 1.05;
-          filter: drop-shadow(0px 0px 10px #f98322);
+          filter: drop-shadow(0px 0px 10px var(--orange));
 }
 
 a {
@@ -199,7 +231,7 @@ a {
           top: 4%;
           left: 37%;
           font-family: "Poppi", sans-serif;
-          color: #f98322;
+          color: var(--orangeDark);
           text-decoration: none;
 }
 
@@ -222,10 +254,8 @@ a {
                     height: 70%;
                     border-radius: 15px;
                     overflow: hide;
-                    background: black;
                     width: 90%;
                     padding: 28px;
                     transition: 200ms;
-                    filter: drop-shadow(0px 0px 13px #f98322);
           }
 }
