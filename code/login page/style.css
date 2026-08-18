@@ -4,13 +4,9 @@
           --bg: #141414;
           --Container: black;
           --subContainer: #1a1a1a;
-
           --text: #e5e7eb;
           --orange: #f98322;
           --orangeDark: #ff6a00;
-          --gray: #ffffff96;
-          --lightShade: #121628;
-          --darkShade: #04060a;
 
 }
 
@@ -21,9 +17,6 @@
           --text: black;
           --orange: #f98322;
           --orangeDark: #ff6a00;
-          --gray: #b3b0b096;
-          --lightShade: #f1f1f1;
-          --darkShade: #cbcbcb;
 
 }
 
@@ -45,22 +38,22 @@ body {
 
 header {
           position: absolute;
-          width: 100vw;
+          width: 100dvw;
           z-index: 9999;
           padding: 0 0;
           top: 10px;
           left: 0;
-          height: 7vh;
+          height: 7dvh;
 
 
 }
 
 #logo {
-          width: min(100px, 20vw);
+          width: min(100px, 20dvw);
 }
 
 header nav {
-          width: 90vw;
+          width: 90dvw;
           margin: 0 auto;
           overflow: hidden;
           display: flex;
@@ -83,7 +76,7 @@ header ul a {
           text-transform: uppercase;
           padding: 0 1.5rem;
           font-weight: 300;
-          font-size: min(2vw, 1em);
+          font-size: min(2dvw, 1em);
 }
 
 header ul a:hover {
@@ -120,7 +113,7 @@ header ul a img {
 
 main {
           width: 100%;
-          height: 100vh;
+          height: 100dvh;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -289,4 +282,18 @@ span {
           #login_container {
                     width: 90%;
           }
+
+          header ul a {
+                    padding: 10px;
+                    font-size: 15px;
+          }
+
+          header ul {
+                    padding: 0px;
+          }
+
+          header nav {
+                    width: 95dvw;
+          }
+
 }

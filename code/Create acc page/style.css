@@ -72,6 +72,7 @@ header ul {
           display: flex;
           list-style: none;
           align-items: center;
+          padding: 0px;
 }
 
 header ul a {
@@ -226,7 +227,7 @@ input::placeholder {
           filter: drop-shadow(0px 0px 10px var(--orange));
 }
 
-a {
+#loginPage {
           position: relative;
           top: 4%;
           left: 37%;
@@ -257,5 +258,14 @@ a {
                     width: 90%;
                     padding: 28px;
                     transition: 200ms;
+          }
+
+          header ul a {
+                    padding: 10px;
+                    font-size: 15px;
+          }
+
+          header nav {
+                    width: 95vw;
           }
 }

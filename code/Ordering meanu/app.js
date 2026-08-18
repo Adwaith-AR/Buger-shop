@@ -50,6 +50,6 @@ const burgers = [
 const createdBurger = []
 for (let i = 0; i < 10; i++) {
           window.console.log(createdBurger)
-          createdBurger.push(`<a href="../orderind page/${burgers[i][0]}/index.html"><div class="grid_child"><img class="burgerImg " src="./img/${burgers[i][0]}.webp" alt=""><div ><h1>${burgers[i][0]}</h1><p>Delicious & freshly made</p><h3>₹${burgers[i][1]}</h3><button>Order Now</button></div></div></a>`)
+          createdBurger.push(`<a href="../orderind page/${burgers[i][0]}/index.html"><div class="grid_child"><img class="burgerImg " src="./img/${burgers[i][0]}.webp" alt=""><div ><h1>${burgers[i][0]}</h1><p>Delicious & freshly made</p><h3>₹${burgers[i][1]}</h3><button class="Orderbtn">Order Now</button></div></div></a>`)
 }
 container.innerHTML = createdBurger.join("")

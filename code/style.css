@@ -88,7 +88,6 @@ header ul a:hover {
 
 #themeBtn {
           background-color: var(--bg);
-          border: solid var(--orange) 2px;
           border-radius: 10px;
           transition: 100ms;
           width: 40px;
