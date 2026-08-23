@@ -18,6 +18,39 @@ const labelO = document.getElementById("labelO");
 const labelT = document.getElementById("labelT");
 const labelL = document.getElementById("labelL");
 const labelS = document.getElementById("labelS");
+const logo = document.getElementById("logo")
+const themeBtn = document.getElementById("themeBtn")
+
+if (localStorage.getItem("theme") == "null") {
+          localStorage.setItem("theme", "light")
+}
+else if (localStorage.getItem("theme") == "dark") {
+          document.body.setAttribute("data-theme", "dark")
+          themeBtn.innerHTML = `<img id="themeIcon" src="../img/moon.png" alt="">`
+          logo.src = "../img/logo.webp"
+}
+else {
+          document.body.setAttribute("data-theme", "light")
+          themeBtn.innerHTML = `<img id="themeIcon" src="../img/sun.png" alt="">`
+          logo.src = "../img/logoDark.webp"
+}
+themeBtn.addEventListener('click', () => {
+
+          if (localStorage.getItem("theme") == "dark") {
+                    localStorage.setItem("theme", "light")
+                    document.body.setAttribute("data-theme", "light")
+                    themeBtn.innerHTML = `<img id="themeIcon" src="../img/sun.png" alt="">`
+                    logo.src = "../img/logoDark.webp"
+
+          }
+          else {
+                    localStorage.setItem("theme", "dark")
+                    document.body.setAttribute("data-theme", "dark")
+                    themeBtn.innerHTML = `<img id="themeIcon" src="../img/moon.png" alt="">`
+                    logo.src = "../img/logo.webp"
+          }
+
+})
 labelC.classList.add("item_selected")
 labelO.classList.add("item_selected")
 labelT.classList.add("item_selected")
@@ -38,16 +71,16 @@ let itemList = [
           "clo", "cls", "clt", "cos", "cot", "cst", "los", "lot", "lst", "ost",
           "clos", "clot", "clst", "cost", "lost",
           "clost"]
-let itemCreated = [`<img src="./img/burger.webp" id="burger" class="burgerimg">`]      
+let itemCreated = [`<img src="./img/burger.webp" id="burger" class="burgerimg">`]
 for (let i = 0; i < itemList.length; i++) {
-          itemCreated.push(`<img src="./img/${itemList[i]}.webp" id="${itemList[i]}" class="burgerimg">`) 
+          itemCreated.push(`<img src="./img/${itemList[i]}.webp" id="${itemList[i]}" class="burgerimg">`)
 
 }
 document.getElementById("bcontainer").innerHTML = itemCreated.join("")
 const burgerImg = document.querySelectorAll(".burgerimg")
 const burger = document.getElementById("burger");
 let SBtnState = true
-let items = document.getElementById("clost") ;
+let items = document.getElementById("clost");
 
 
 

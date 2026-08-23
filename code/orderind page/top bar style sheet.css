@@ -1,6 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Monoton&family=Rubik+Bubbles&display=swap');
 
+[data-theme="dark"] {
+          --bg: #141414;
+          --Container: black;
+          --subContainer: #1a1a1a;
+          --text: #e5e7eb;
+          --orange: #f98322;
+          --orangeDark: #ff6a00;
 
+}
+
+[data-theme="light"] {
+          --bg: #e0e0e0;
+          --Container: white;
+          --subContainer: #c6c6c6;
+          --text: black;
+          --orange: #f98322;
+          --orangeDark: #ff6a00;
+
+}
 *,
 *::after,
 *::before {
@@ -11,7 +29,7 @@
 
 
 body {
-          background:radial-gradient(circle at top left, #1c1c1c, #000);;
+          background:var(--bg);
           overflow: hidden;
 
 }
@@ -52,7 +70,7 @@ header ul a {
           font-family: "Poppi", sans-serif;
           transition: 1s;
           text-decoration: none;
-          color: #ffff;
+          color: var(--text);
           text-transform: uppercase;
           padding: 0 1.5rem;
           font-weight: 300;
@@ -68,19 +86,25 @@ header ul a img {
           width: 10px;
 }
 
-.icon {
-          height: 20px;
-
-}
-
-#icons {
+#themeBtn {
+          background-color: var(--bg);
+          border: none;
+          border-radius: 10px;
+          transition: 100ms;
+          width: 40px;
+          height: 40px;
+          transition: 300ms;
           display: flex;
+          align-items: center;
           justify-content: center;
-          padding: 3px;
 }
 
-.icon:hover {
-          border-radius: 50px;
-          background-color: #818181;
+#themeBtn img {
+          width: 40px;
+          height: 40px;
 }
 
+#themeBtn:hover {
+          transition: 300ms;
+          background-color: var(--orange);
+}

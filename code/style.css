@@ -27,8 +27,8 @@
           --bg: #141414;
           --text: #ffff;
           --gray: #a5a5a5;
-          --orange: #fc731e;
-          --orangeDark: #ff6200;
+          --orange: #f98322;
+          --orangeDark: #ff6a00;
 
 }
 
@@ -36,8 +36,8 @@
           --bg: #e3e3e3;
           --gray: #626262;
           --text: #000000;
-          --orange: #f77625;
-          --orangeDark: #ff6200;
+          --orange: #f98322;
+          --orangeDark: #ff6a00;
 }
 
 * {

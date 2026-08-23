@@ -21,7 +21,25 @@
 }
 
 
+[data-theme="dark"] {
+          --bg: #141414;
+          --Container: black;
+          --subContainer: #1a1a1a;
+          --text: #e5e7eb;
+          --orange: #f98322;
+          --orangeDark: #ff6a00;
 
+}
+
+[data-theme="light"] {
+          --bg: #e0e0e0;
+          --Container: white;
+          --subContainer: #c6c6c6;
+          --text: black;
+          --orange: #f98322;
+          --orangeDark: #ff6a00;
+
+}
 
 
 
@@ -75,7 +93,7 @@ main {
           height: 50vh;
           width: 45vw;
           padding: 20px;
-          background: black;
+          background: var(--Container);
           border-radius: 20px;
           display: flex;
           flex-direction: column;
@@ -87,11 +105,11 @@ main {
 .burgerimg {
           aspect-ratio: 16/16;
           width: 545px;
-          filter: drop-shadow(0px 0px 100px white);
+          filter: drop-shadow(0px 0px 100px var(--text));
 }
 
 h1 {
-          color: white;
+          color: var(--text);
           font-weight: 1000 ;
           letter-spacing: 1px;
           font-family: "Poppi", sans-serif;
@@ -100,11 +118,11 @@ h1 {
 }
 
 span {
-          color: #f98322;
+          color: var(--orange);
 }
 
 p {
-          color: white;
+          color: var(--text);
           font-weight: 100;
           letter-spacing: 1px;
           font-family: "Poppi", sans-serif;
@@ -113,7 +131,7 @@ p {
 }
 
 h3 {
-          color: #f98322;
+          color: var(--orange);
           font-weight: 900;
           font-family: "Poppi", sans-serif;
           font-size: 27px;
@@ -131,8 +149,8 @@ h3 {
           border-radius: 10px;
           font-size: 20px;
           border: none;
-          color: white;
-          background: #222;
+          color: var(--text);
+          background: var(--subContainer);
           font-family: "Poppi", sans-serif;
 }
 
@@ -142,7 +160,7 @@ h5 {
           display: flex;
           justify-content: center;
           align-items: center;
-          color: white;
+          color: var(--text);
           font-weight: 100;
           font-size: 20px;
           font-family: "Poppi", sans-serif;
@@ -158,9 +176,9 @@ h5 {
 }
 
 #productItems label {
-          color: white;
+          color: var(--text);
           border-radius: 10px;
-          background: #141414;
+          background: var(--subContainer);
           font-size: 1em;
           padding: 10px 20px;
           text-transform: uppercase;
@@ -191,13 +209,13 @@ h5 {
 }
 
 #b1 {
-          color: black;
+          color: var(--bg);
           background: linear-gradient(90deg, #ffc800, #ff7300);
 }
 
 #b2 {
-          color: white;
-          background: #222;
+          color: var(--text);
+          background: var(--subContainer);
 }
 
 .orientation {
@@ -216,7 +234,7 @@ button {
 }
 
 .item_selected {
-          color: black !important;
+          color: var(--bg) !important;
           font-weight: 600;
           background: linear-gradient(90deg, #ffc800, #ff7300) !important;
 }
@@ -263,7 +281,6 @@ button {
                     height: 50vh;
                     width: 90%;
                     padding: 20px;
-                    background: black;
                     border-radius: 20px;
                     display: flex;
                     flex-direction: column;
@@ -284,9 +301,7 @@ button {
           }
 
           #productItems label {
-                    color: white;
                     border-radius: 5px;
-                    background: #141414;
                     font-size: 15px;
                     padding: 5px 10px;
                     text-transform: uppercase;

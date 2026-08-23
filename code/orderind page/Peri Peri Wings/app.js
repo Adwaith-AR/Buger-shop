@@ -8,417 +8,122 @@ const deleteBtn = document.getElementById("deleteBtn");
 const productQuantityContainer = document.getElementById("product_quantity");
 const burgerContainer = document.getElementById("bcontainer");
 
-
-
-const burger = document.getElementById("burger");
-const c = document.getElementById("c");
-const l = document.getElementById("l");
-const o = document.getElementById("o");
-const s = document.getElementById("s");
-const t = document.getElementById("t");
-const cl = document.getElementById("cl");
-const co = document.getElementById("co");
-const cs = document.getElementById("cs");
-const ct = document.getElementById("ct");
-const lo = document.getElementById("lo");
-const ls = document.getElementById("ls");
-const lt = document.getElementById("lt");
-const os = document.getElementById("os");
-const ot = document.getElementById("ot");
-const st = document.getElementById("st");
-const clo = document.getElementById("clo");
-const cls = document.getElementById("cls");
-const clt = document.getElementById("clt");
-const cos = document.getElementById("cos");
-const cot = document.getElementById("cot");
-const cst = document.getElementById("cst");
-const los = document.getElementById("los");
-const lot = document.getElementById("lot");
-const lst = document.getElementById("lst");
-const ost = document.getElementById("ost");
-const clos = document.getElementById("clos");
-const clot = document.getElementById("clot");
-const clst = document.getElementById("clst");
-const cost = document.getElementById("cost");
-const lost = document.getElementById("lost");
-const clost = document.getElementById("clost");
-
 const C = document.getElementById("chess");
 const O = document.getElementById("onions");
 const T = document.getElementById("tomatoes");
 const L = document.getElementById("lettuce");
 const S = document.getElementById("ketchup");
-
 const labelC = document.getElementById("labelC");
 const labelO = document.getElementById("labelO");
 const labelT = document.getElementById("labelT");
 const labelL = document.getElementById("labelL");
 const labelS = document.getElementById("labelS");
+const logo = document.getElementById("logo")
+const themeBtn = document.getElementById("themeBtn")
+
+if (localStorage.getItem("theme") == "null") {
+          localStorage.setItem("theme", "light")
+}
+else if (localStorage.getItem("theme") == "dark") {
+          document.body.setAttribute("data-theme", "dark")
+          themeBtn.innerHTML = `<img id="themeIcon" src="../img/moon.png" alt="">`
+          logo.src = "../img/logo.webp"
+}
+else {
+          document.body.setAttribute("data-theme", "light")
+          themeBtn.innerHTML = `<img id="themeIcon" src="../img/sun.png" alt="">`
+          logo.src = "../img/logoDark.webp"
+}
+themeBtn.addEventListener('click', () => {
+
+          if (localStorage.getItem("theme") == "dark") {
+                    localStorage.setItem("theme", "light")
+                    document.body.setAttribute("data-theme", "light")
+                    themeBtn.innerHTML = `<img id="themeIcon" src="../img/sun.png" alt="">`
+                    logo.src = "../img/logoDark.webp"
+
+          }
+          else {
+                    localStorage.setItem("theme", "dark")
+                    document.body.setAttribute("data-theme", "dark")
+                    themeBtn.innerHTML = `<img id="themeIcon" src="../img/moon.png" alt="">`
+                    logo.src = "../img/logo.webp"
+          }
+
+})
 labelC.classList.add("item_selected")
 labelO.classList.add("item_selected")
 labelT.classList.add("item_selected")
 labelL.classList.add("item_selected")
 labelS.classList.add("item_selected")
-
 C.checked = true
 O.checked = true
 T.checked = true
 L.checked = true
 S.checked = true
-
 let CBtnState = true
 let OBtnState = true
 let TBtnState = true
 let LBtnState = true
+let itemList = [
+          "c", "l", "o", "s", "t",
+          "cl", "co", "cs", "ct", "lo", "ls", "lt", "os", "ot", "st",
+          "clo", "cls", "clt", "cos", "cot", "cst", "los", "lot", "lst", "ost",
+          "clos", "clot", "clst", "cost", "lost",
+          "clost"]
+let itemCreated = [`<img src="./img/burger.webp" id="burger" class="burgerimg">`]
+for (let i = 0; i < itemList.length; i++) {
+          itemCreated.push(`<img src="./img/${itemList[i]}.webp" id="${itemList[i]}" class="burgerimg">`)
+
+}
+document.getElementById("bcontainer").innerHTML = itemCreated.join("")
+const burgerImg = document.querySelectorAll(".burgerimg")
+const burger = document.getElementById("burger");
 let SBtnState = true
-
-
-
-let items = clost;
+let items = document.getElementById("clost");
 
 
 
 
 
 function hideBurger() {
+          burgerImg.forEach(element => {
+                    element.style.display = "none "
 
-          c.classList.add("hide");
-          l.classList.add("hide");
-          o.classList.add("hide");
-          s.classList.add("hide");
-          t.classList.add("hide");
-          cl.classList.add("hide");
-          co.classList.add("hide");
-          cs.classList.add("hide");
-          ct.classList.add("hide");
-          lo.classList.add("hide");
-          ls.classList.add("hide");
-          lt.classList.add("hide");
-          os.classList.add("hide");
-          ot.classList.add("hide");
-          st.classList.add("hide");
-          clo.classList.add("hide");
-          cls.classList.add("hide");
-          clt.classList.add("hide");
-          cos.classList.add("hide");
-          cot.classList.add("hide");
-          cst.classList.add("hide");
-          los.classList.add("hide");
-          lot.classList.add("hide");
-          lst.classList.add("hide");
-          ost.classList.add("hide");
-          clos.classList.add("hide");
-          clot.classList.add("hide");
-          clst.classList.add("hide");
-          cost.classList.add("hide");
-          lost.classList.add("hide");
-          clost.classList.add("hide");
-          burger.classList.add("hide");
-
-
-
+          });
 }
 hideBurger();
-burger.classList.remove("hide");
-
-function burger_to_show(item_selected) {
+burger.style.display = "block"
+function showBurger(item_selected) {
           hideBurger()
           if (item_selected == "") {
-                    hideBurger();
-                    burger.classList.remove("hide");
+                    burger.style.display = "block"
           }
-          else if (item_selected.includes("c")
-                    && item_selected.includes("l") == false
-                    && item_selected.includes("o") == false
-                    && item_selected.includes("s") == false
-                    && item_selected.includes("t") == false
-          ) {
-                    hideBurger();
-                    c.classList.remove("hide");
-          }
-          else if (item_selected.includes("l")
-                    && item_selected.includes("c") == false
-                    && item_selected.includes("o") == false
-                    && item_selected.includes("s") == false
-                    && item_selected.includes("t") == false
-          ) {
-                    hideBurger();
-                    l.classList.remove("hide");
-          }
-          else if (item_selected.includes("l") == false
-                    && item_selected.includes("c") == false
-                    && item_selected.includes("o")
-                    && item_selected.includes("s") == false
-                    && item_selected.includes("t") == false
-          ) {
-                    hideBurger();
-                    o.classList.remove("hide");
-          }
-          else if (item_selected.includes("l") == false
-                    && item_selected.includes("c") == false
-                    && item_selected.includes("o") == false
-                    && item_selected.includes("s")
-                    && item_selected.includes("t") == false
-          ) {
-                    hideBurger();
-                    s.classList.remove("hide");
-          }
-          else if (item_selected.includes("l") == false
-                    && item_selected.includes("c") == false
-                    && item_selected.includes("o") == false
-                    && item_selected.includes("s") == false
-                    && item_selected.includes("t")
-          ) {
-                    hideBurger();
-                    t.classList.remove("hide");
-          }
-          else if (item_selected.includes("l")
-                    && item_selected.includes("c")
-                    && item_selected.includes("o") == false
-                    && item_selected.includes("s") == false
-                    && item_selected.includes("t") == false
-          ) {
-                    hideBurger();
-                    cl.classList.remove("hide");
-          }
-          else if (item_selected.includes("l") == false
-                    && item_selected.includes("c")
-                    && item_selected.includes("o")
-                    && item_selected.includes("s") == false
-                    && item_selected.includes("t") == false
-          ) {
-                    hideBurger();
-                    co.classList.remove("hide");
-          }
-          else if (item_selected.includes("l") == false
-                    && item_selected.includes("c")
-                    && item_selected.includes("o") == false
-                    && item_selected.includes("s")
-                    && item_selected.includes("t") == false
-          ) {
-                    hideBurger();
-                    cs.classList.remove("hide");
-          }
-          else if (item_selected.includes("l") == false
-                    && item_selected.includes("c")
-                    && item_selected.includes("o") == false
-                    && item_selected.includes("s") == false
-                    && item_selected.includes("t")
-          ) {
-                    hideBurger();
-                    ct.classList.remove("hide");
-          }
-          else if (item_selected.includes("l")
-                    && item_selected.includes("c") == false
-                    && item_selected.includes("o")
-                    && item_selected.includes("s") == false
-                    && item_selected.includes("t") == false
-          ) {
-                    hideBurger();
-                    lo.classList.remove("hide");
-          }
-          else if (item_selected.includes("l")
-                    && item_selected.includes("c") == false
-                    && item_selected.includes("o") == false
-                    && item_selected.includes("s")
-                    && item_selected.includes("t") == false
-          ) {
-                    hideBurger();
-                    ls.classList.remove("hide");
-          }
-          else if (item_selected.includes("l")
-                    && item_selected.includes("c") == false
-                    && item_selected.includes("o") == false
-                    && item_selected.includes("s") == false
-                    && item_selected.includes("t")
-          ) {
-                    hideBurger();
-                    lt.classList.remove("hide");
-          }
-          else if (item_selected.includes("l") == false
-                    && item_selected.includes("c") == false
-                    && item_selected.includes("o")
-                    && item_selected.includes("s")
-                    && item_selected.includes("t") == false
-          ) {
-                    hideBurger();
-                    os.classList.remove("hide");
-          }
-          else if (item_selected.includes("l") == false
-                    && item_selected.includes("c") == false
-                    && item_selected.includes("o")
-                    && item_selected.includes("s") == false
-                    && item_selected.includes("t")
-          ) {
-                    hideBurger();
-                    ot.classList.remove("hide");
-          }
-          else if (item_selected.includes("l") == false
-                    && item_selected.includes("c") == false
-                    && item_selected.includes("o") == false
-                    && item_selected.includes("s")
-                    && item_selected.includes("t")
-          ) {
-                    hideBurger();
-                    st.classList.remove("hide");
-          }
-          else if (item_selected.includes("l")
-                    && item_selected.includes("c")
-                    && item_selected.includes("o")
-                    && item_selected.includes("s") == false
-                    && item_selected.includes("t") == false
-          ) {
-                    hideBurger();
-                    clo.classList.remove("hide");
-          }
-          else if (item_selected.includes("l")
-                    && item_selected.includes("c")
-                    && item_selected.includes("o") == false
-                    && item_selected.includes("s")
-                    && item_selected.includes("t") == false
-          ) {
-                    hideBurger();
-                    cls.classList.remove("hide");
-          } else if (item_selected.includes("l")
-                    && item_selected.includes("c")
-                    && item_selected.includes("o") == false
-                    && item_selected.includes("s") == false
-                    && item_selected.includes("t")
-          ) {
-                    hideBurger();
-                    clt.classList.remove("hide");
-          } else if (item_selected.includes("l") == false
-                    && item_selected.includes("c")
-                    && item_selected.includes("o")
-                    && item_selected.includes("s")
-                    && item_selected.includes("t") == false
-          ) {
-                    hideBurger();
-                    cos.classList.remove("hide");
-          } else if (item_selected.includes("l") == false
-                    && item_selected.includes("c")
-                    && item_selected.includes("o")
-                    && item_selected.includes("s") == false
-                    && item_selected.includes("t")
-          ) {
-                    hideBurger();
-                    cot.classList.remove("hide");
-          } else if (item_selected.includes("l") == false
-                    && item_selected.includes("c")
-                    && item_selected.includes("o") == false
-                    && item_selected.includes("s")
-                    && item_selected.includes("t")
-          ) {
-                    hideBurger();
-                    cst.classList.remove("hide");
-          } else if (item_selected.includes("l")
-                    && item_selected.includes("c") == false
-                    && item_selected.includes("o")
-                    && item_selected.includes("s")
-                    && item_selected.includes("t") == false
-          ) {
-                    hideBurger();
-                    los.classList.remove("hide");
-          } else if (item_selected.includes("l")
-                    && item_selected.includes("c") == false
-                    && item_selected.includes("o")
-                    && item_selected.includes("s") == false
-                    && item_selected.includes("t")
-          ) {
-                    hideBurger();
-                    lot.classList.remove("hide");
-          } else if (item_selected.includes("l")
-                    && item_selected.includes("c") == false
-                    && item_selected.includes("o") == false
-                    && item_selected.includes("s")
-                    && item_selected.includes("t")
-          ) {
-                    hideBurger();
-                    lst.classList.remove("hide");
-          }
-          else if (item_selected.includes("l") == false
-                    && item_selected.includes("c") == false
-                    && item_selected.includes("o")
-                    && item_selected.includes("s")
-                    && item_selected.includes("t")
-          ) {
-                    hideBurger();
-                    ost.classList.remove("hide");
-          }
-          else if (item_selected.includes("l")
-                    && item_selected.includes("c")
-                    && item_selected.includes("o")
-                    && item_selected.includes("s")
-                    && item_selected.includes("t") == false
-          ) {
-                    hideBurger();
-                    clos.classList.remove("hide");
-          }
-          else if (item_selected.includes("l")
-                    && item_selected.includes("c")
-                    && item_selected.includes("o")
-                    && item_selected.includes("s") == false
-                    && item_selected.includes("t")
-          ) {
-                    hideBurger();
-                    clot.classList.remove("hide");
-          }
-          else if (item_selected.includes("l")
-                    && item_selected.includes("c")
-                    && item_selected.includes("o") == false
-                    && item_selected.includes("s")
-                    && item_selected.includes("t")
-          ) {
-                    hideBurger();
-                    clst.classList.remove("hide");
-          }
-          else if (item_selected.includes("l") == false
-                    && item_selected.includes("c")
-                    && item_selected.includes("o")
-                    && item_selected.includes("s")
-                    && item_selected.includes("t")
-          ) {
-                    hideBurger();
-                    cost.classList.remove("hide");
-          }
-          else if (item_selected.includes("l")
-                    && item_selected.includes("c") == false
-                    && item_selected.includes("o")
-                    && item_selected.includes("s")
-                    && item_selected.includes("t")
-          ) {
-                    hideBurger();
-                    lost.classList.remove("hide");
-          }
-          else if (item_selected.includes("l")
-                    && item_selected.includes("c")
-                    && item_selected.includes("o")
-                    && item_selected.includes("s")
-                    && item_selected.includes("t")
-          ) {
-                    hideBurger();
-                    clost.classList.remove("hide");
-          }
-}
+          else {
+                    document.getElementById(item_selected).style.display = "block"
 
+          }
+
+}
 function collectData() {
           items = ""
           if (C.checked == false) {
                     items = items + "c"
           }
-          if (O.checked == false) {
-                    items = items + "o"
-          }
-          if (T.checked == false) {
-                    items = items + "t"
-          }
           if (L.checked == false) {
                     items = items + "l"
+          }
+          if (O.checked == false) {
+                    items = items + "o"
           }
           if (S.checked == false) {
                     items = items + "s"
           }
-          burger_to_show(items)
+          if (T.checked == false) {
+                    items = items + "t"
+          }
+          window.console.log(items)
+          showBurger(items)
 }
 
 
